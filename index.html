@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El agua que no vemos · Cinco cuencas del Perú</title>
+<meta name="description" content="Proyecto de responsabilidad social basado en el estudio hidrológico de cinco cuencas peruanas. Datos reales de SENAMHI, NASA e ISRIC sobre disponibilidad hídrica y escasez.">
+<meta property="og:title" content="El agua que no vemos · Cinco cuencas del Perú">
+<meta property="og:description" content="Cinco cuencas, 45 años de datos y una pregunta: ¿alcanzará el agua?">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fraunces:opsz,wght@9..144,600;9..144,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>">
+</head>
+<body>
+
+<!-- ===================== BARRA DE PROGRESO ===================== -->
+<div class="progreso" id="progreso"></div>
+
+<!-- ===================== NAVEGACIÓN ===================== -->
+<nav id="nav">
+  <a href="#inicio" class="marca">💧 <span>El agua que no vemos</span></a>
+  <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+  <ul id="menu">
+    <li><a href="#problema">El problema</a></li>
+    <li><a href="#cuencas">Las cuencas</a></li>
+    <li><a href="#evidencia">La evidencia</a></li>
+    <li><a href="#futuro">El futuro</a></li>
+    <li><a href="#actua">Actúa</a></li>
+  </ul>
+</nav>
+
+<!-- ===================== PORTADA ===================== -->
+<header id="inicio" class="hero">
+  <canvas id="lluvia"></canvas>
+  <div class="hero-txt">
+    <p class="kicker anim a1">Responsabilidad social · Ingeniería hidrológica</p>
+    <h1 class="anim a2">El agua que <em>no vemos</em></h1>
+    <p class="sub anim a3">
+      Cinco cuencas del Perú. Cuarenta y cinco años de datos.<br>
+      Una sola pregunta: <strong>¿alcanzará el agua?</strong>
+    </p>
+    <a href="#problema" class="cta anim a4">Descúbrelo</a>
+  </div>
+  <div class="scroll-ind"><span></span></div>
+</header>
+
+<!-- ===================== CIFRAS ===================== -->
+<section class="cifras">
+  <div class="grid-cifras">
+    <div class="cifra" data-aos="zoom-in">
+      <span class="num" data-contar="5">0</span>
+      <p>cuencas estudiadas</p>
+    </div>
+    <div class="cifra" data-aos="zoom-in" data-aos-delay="100">
+      <span class="num" data-contar="16436">0</span>
+      <p>días de lluvia medidos</p>
+    </div>
+    <div class="cifra" data-aos="zoom-in" data-aos-delay="200">
+      <span class="num" data-contar="30">0</span>
+      <p>escenarios climáticos</p>
+    </div>
+    <div class="cifra" data-aos="zoom-in" data-aos-delay="300">
+      <span class="num" data-contar="2050">0</span>
+      <p>horizonte del estudio</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EL PROBLEMA ===================== -->
+<section id="problema" class="seccion">
+  <div class="contenedor">
+    <span class="etq" data-aos="fade-right">01 · El problema</span>
+    <h2 data-aos="fade-up">No toda el agua que cae se convierte en río</h2>
+    <div class="dos-col">
+      <div data-aos="fade-right">
+        <p class="lead">De cada 100 litros que llueven sobre una cuenca altoandina,
+        entre <strong>74 y 91 se evaporan</strong> antes de llegar a un cauce.</p>
+        <p>El resto es todo lo que tenemos: lo que beben las comunidades, lo que riega
+        los cultivos y lo que mantiene vivo al río. Cuanto más seca es una cuenca,
+        mayor es la fracción que se pierde en el aire.</p>
+        <p>Ese principio físico se llama <strong>marco de Budyko</strong>, y explica
+        por qué dos cuencas vecinas pueden tener destinos hídricos opuestos.</p>
+      </div>
+      <div class="tarjetas" data-aos="fade-left">
+        <div class="tarjeta agua">
+          <span class="ico">💧</span>
+          <h3>Lo que llueve</h3>
+          <p>Entre 569 y 980 mm al año según la cuenca</p>
+        </div>
+        <div class="tarjeta sol">
+          <span class="ico">☀️</span>
+          <h3>Lo que se evapora</h3>
+          <p>Entre 1002 y 1435 mm de demanda atmosférica</p>
+        </div>
+        <div class="tarjeta rio">
+          <span class="ico">🏞️</span>
+          <h3>Lo que queda</h3>
+          <p>Solo del 9 % al 25 % se convierte en caudal</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LAS CUENCAS ===================== -->
+<section id="cuencas" class="seccion alt">
+  <div class="contenedor">
+    <span class="etq" data-aos="fade-right">02 · Las cuencas</span>
+    <h2 data-aos="fade-up">Cinco territorios, cinco realidades</h2>
+    <p class="lead centro" data-aos="fade-up">
+      Ordenadas de la más húmeda a la más árida. Desliza para comparar.</p>
+
+    <div class="cuencas-grid">
+      <article class="cuenca" data-aos="fade-up" style="--c:#0072B2">
+        <h3>Paredes Bravo</h3>
+        <p class="ubi">Junín · Jauja</p>
+        <div class="barra"><i style="width:100%"></i></div>
+        <ul>
+          <li><b>824</b> km²</li><li><b>980</b> mm/año de lluvia</li>
+          <li><b>25.4 %</b> se vuelve caudal</li><li>Aridez <b>1.03</b></li>
+        </ul>
+        <span class="estado ok">Holgada</span>
+      </article>
+
+      <article class="cuenca" data-aos="fade-up" data-aos-delay="80" style="--c:#009E73">
+        <h3>Llamoga Boñón</h3>
+        <p class="ubi">Junín · Yauli</p>
+        <div class="barra"><i style="width:94%"></i></div>
+        <ul>
+          <li><b>703</b> km²</li><li><b>803</b> mm/año</li>
+          <li><b>23.9 %</b> se vuelve caudal</li><li>Aridez <b>1.25</b></li>
+        </ul>
+        <span class="estado ok">Holgada</span>
+      </article>
+
+      <article class="cuenca" data-aos="fade-up" data-aos-delay="160" style="--c:#CC79A7">
+        <h3>Héctor</h3>
+        <p class="ubi">Huancavelica · Junín</p>
+        <div class="barra"><i style="width:78%"></i></div>
+        <ul>
+          <li><b>2967</b> km²</li><li><b>789</b> mm/año</li>
+          <li><b>19.9 %</b> se vuelve caudal</li><li>Aridez <b>1.40</b></li>
+        </ul>
+        <span class="estado ok">Holgada</span>
+      </article>
+
+      <article class="cuenca" data-aos="fade-up" data-aos-delay="240" style="--c:#E69F00">
+        <h3>Acosta Gálvez</h3>
+        <p class="ubi">Cajamarca</p>
+        <div class="barra"><i style="width:58%"></i></div>
+        <ul>
+          <li><b>715</b> km²</li><li><b>733</b> mm/año</li>
+          <li><b>14.8 %</b> se vuelve caudal</li><li>Aridez <b>1.71</b></li>
+        </ul>
+        <span class="estado medio">Vigilar</span>
+      </article>
+
+      <article class="cuenca critica" data-aos="fade-up" data-aos-delay="320" style="--c:#D55E00">
+        <h3>Yesica Blanco</h3>
+        <p class="ubi">Cajamarca · Lambayeque</p>
+        <div class="barra"><i style="width:34%"></i></div>
+        <ul>
+          <li><b>1431</b> km²</li><li><b>569</b> mm/año</li>
+          <li><b>8.5 %</b> se vuelve caudal</li><li>Aridez <b>2.52</b></li>
+        </ul>
+        <span class="estado mal">En riesgo</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LA EVIDENCIA ===================== -->
+<section id="evidencia" class="seccion">
+  <div class="contenedor">
+    <span class="etq" data-aos="fade-right">03 · La evidencia</span>
+    <h2 data-aos="fade-up">Lo que dicen los datos</h2>
+    <p class="lead centro" data-aos="fade-up">
+      Todas las figuras provienen del estudio hidrológico. Ningún dato es ilustrativo.</p>
+
+    <div class="figuras">
+      <figure data-aos="fade-up">
+        <img src="assets/img/budyko.png" alt="Diagrama de Budyko con las cinco cuencas sobre la curva teórica" loading="lazy">
+        <figcaption><b>Por qué unas cuencas dan más agua.</b> Las cinco caen sobre la
+        curva teórica: a mayor aridez, mayor evaporación y menos río. No es azar, es física.</figcaption>
+      </figure>
+      <figure data-aos="fade-up">
+        <img src="assets/img/duracion.png" alt="Curvas de duración de caudales de las cinco cuencas" loading="lazy">
+        <figcaption><b>Cuando el río se seca.</b> Paredes Bravo mantiene 1.117 m³/s el
+        95 % del tiempo. Yesica Blanco baja a 0.026 m³/s: prácticamente se queda sin agua.</figcaption>
+      </figure>
+      <figure data-aos="fade-up">
+        <img src="assets/img/balance.png" alt="Balance climático mensual comparado" loading="lazy">
+        <figcaption><b>Doce meses de sed.</b> Yesica Blanco está bajo la línea de déficit
+        todo el año y acumula −866 mm. Paredes Bravo apenas la roza.</figcaption>
+      </figure>
+      <figure data-aos="fade-up">
+        <img src="assets/img/variabilidad.png" alt="Variabilidad interanual de la precipitación" loading="lazy">
+        <figcaption><b>La lluvia impredecible.</b> En Yesica Blanco un año puede llover
+        cinco veces más que otro. Esa incertidumbre es tan dañina como la escasez.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CITA ===================== -->
+<section class="cita">
+  <blockquote data-aos="zoom-in">
+    <p>El agua no falta porque llueva poco.<br>
+    Falta cuando pedimos más de lo que el territorio puede dar.</p>
+  </blockquote>
+</section>
+
+<!-- ===================== EL FUTURO ===================== -->
+<section id="futuro" class="seccion alt">
+  <div class="contenedor">
+    <span class="etq" data-aos="fade-right">04 · El futuro</span>
+    <h2 data-aos="fade-up">¿Qué pasará hacia 2050?</h2>
+
+    <div class="dos-col">
+      <div data-aos="fade-right">
+        <p class="lead">Se procesaron <strong>10 modelos climáticos globales</strong> de
+        la NASA en <strong>3 escenarios de emisiones</strong>, uno por uno.</p>
+        <p>El resultado sorprende: la mayoría de los modelos proyecta <strong>más
+        lluvia</strong>, no menos. Pero también proyecta más calor, y con más calor la
+        atmósfera reclama más agua.</p>
+        <p class="aviso"><b>Importante:</b> los diez modelos subestiman la lluvia
+        histórica entre 31 % y 42 %. Reconocerlo no debilita el estudio: lo hace honesto.
+        Cualquier proyección debe leerse con esa incertidumbre a la vista.</p>
+      </div>
+      <div class="escenarios" data-aos="fade-left">
+        <div class="esc">
+          <span class="et">SSP1-2.6</span><p>Emisiones bajas · el mundo cumple</p>
+          <div class="term"><i style="width:35%"></i></div>
+        </div>
+        <div class="esc">
+          <span class="et">SSP3-7.0</span><p>Emisiones altas · rivalidad regional</p>
+          <div class="term"><i style="width:70%"></i></div>
+        </div>
+        <div class="esc">
+          <span class="et">SSP5-8.5</span><p>Emisiones muy altas · sin frenos</p>
+          <div class="term"><i style="width:100%"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="figuras dos" style="margin-top:3rem">
+      <figure data-aos="fade-up">
+        <img src="assets/img/demanda.png" alt="Rango del balance oferta-demanda" loading="lazy">
+        <figcaption><b>El margen de decisión.</b> En Yesica Blanco el resultado depende
+        de cómo reguemos: con riego eficiente no hay déficit; con riego tradicional y toda
+        la superficie irrigada, la demanda casi triplica la oferta.</figcaption>
+      </figure>
+      <figure data-aos="fade-up" data-aos-delay="100">
+        <img src="assets/img/sensibilidad.png" alt="Matriz de sensibilidad del balance" loading="lazy">
+        <figcaption><b>La eficiencia lo cambia todo.</b> Cada celda es un futuro posible.
+        Las rojas son déficit; las azules, sostenibilidad. Elegimos en qué celda vivir.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ACTÚA ===================== -->
+<section id="actua" class="seccion">
+  <div class="contenedor">
+    <span class="etq" data-aos="fade-right">05 · Actúa</span>
+    <h2 data-aos="fade-up">La buena noticia: depende de nosotros</h2>
+    <p class="lead centro" data-aos="fade-up">
+      El clima no decide solo. La forma en que usamos el agua pesa tanto o más.</p>
+
+    <div class="acciones">
+      <div class="accion" data-aos="flip-left">
+        <span class="ico">🌱</span><h3>Riego eficiente</h3>
+        <p>Pasar de gravedad tradicional a goteo reduce a menos de la mitad el agua
+        necesaria para el mismo cultivo. Es la palanca más poderosa que existe.</p>
+      </div>
+      <div class="accion" data-aos="flip-left" data-aos-delay="100">
+        <span class="ico">🏞️</span><h3>Caudal ecológico</h3>
+        <p>Dejar correr al menos el 10 % del caudal mantiene vivo al río. No es agua
+        perdida: es la que sostiene el sistema del que todos dependemos.</p>
+      </div>
+      <div class="accion" data-aos="flip-left" data-aos-delay="200">
+        <span class="ico">📊</span><h3>Medir para decidir</h3>
+        <p>Ninguna de las cinco cuencas tiene una estación de caudal utilizable.
+        Sin medición no hay gestión posible.</p>
+      </div>
+      <div class="accion" data-aos="flip-left" data-aos-delay="300">
+        <span class="ico">🤝</span><h3>Compartir el dato</h3>
+        <p>Todo este estudio es abierto y reproducible. El conocimiento sobre el agua
+        debe ser un bien común, no un archivo cerrado.</p>
+      </div>
+    </div>
+
+    <div class="cierre" data-aos="zoom-in">
+      <h3>Cuida el agua que no ves</h3>
+      <p>Cada gota que llega a tu casa recorrió una cuenca entera.
+      Cuidarla empieza por entender de dónde viene.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PIE ===================== -->
+<footer>
+  <div class="contenedor pie">
+    <div>
+      <h4>Fuentes de datos</h4>
+      <ul>
+        <li>SENAMHI · PISCOp v3.0 y PISCOt v1.2</li>
+        <li>NASA · NEX-GDDP-CMIP6</li>
+        <li>ISRIC · SoilGrids 250 m</li>
+        <li>ANA / SNIRH · caudales</li>
+        <li>INEI · Censos 2017 y 2025</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Transparencia</h4>
+      <ul>
+        <li>Modelos no calibrados contra caudal observado</li>
+        <li>ETo por Hargreaves-Samani, no Penman-Monteith</li>
+        <li>Parámetros de suelo estimados, no medidos</li>
+        <li>Demanda cuantificada parcialmente</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Sobre el proyecto</h4>
+      <p>Trabajo de responsabilidad social derivado de un estudio de disponibilidad
+      hídrica en cinco cuencas del Perú. Todas las figuras son resultados propios.</p>
+    </div>
+  </div>
+  <p class="copy">Datos abiertos · Hecho para concientizar, no para decorar</p>
+</footer>
+
+<button id="arriba" aria-label="Volver arriba">↑</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
