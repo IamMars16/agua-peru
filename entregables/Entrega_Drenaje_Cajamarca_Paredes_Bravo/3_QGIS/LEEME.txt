@@ -1,16 +1,15 @@
 Proyecto QGIS - Drenaje pluvial de la ciudad de Cajamarca
-Abrir Drenaje_Cajamarca.qgs con QGIS 3.x (sin mover las carpetas).
-Sistema de referencia: WGS 84 / UTM zona 17S (EPSG:32717).
+=========================================================
+1. Descomprima TODO el ZIP (no abra el proyecto desde dentro del ZIP).
+2. Abra 3_QGIS/Drenaje_Cajamarca.qgs con QGIS 3.x (probado con QGIS 3.34).
+   No separe el .qgs de la carpeta "rasters" ni del archivo .gpkg.
+3. Sistema de referencia: WGS 84 / UTM zona 17S (EPSG:32717).
 
-Capas:
-- drenaje_cajamarca.gpkg
-  * puntos_criticos: 31 puntos (C1-C13 INGEMMET A7105, L1-L12 INGEMMET A7118, Z1-Z6 PNUD-INDECI)
-  * cuencas: Calispuquio, Los Chilcos y San Lucas, con area, Tc y caudales Q10-Q100
-  * red_drenaje_dem: red de drenaje derivada del DEM
-  * area_estudio: limite del area de estudio
-- rasters/P-01 ... P-06: los seis planos georreferenciados (GeoTIFF), superponibles
-- rasters/DEM_Copernicus_30m_UTM17S.tif: modelo digital de elevacion
-- OpenStreetMap (capa XYZ, requiere internet)
-
-Para ver los planos superpuestos, active o desactive cada uno en el panel de capas
-y ajuste su opacidad en Propiedades > Transparencia.
+Panel de capas
+- Datos del estudio: puntos críticos (C1-C13, L1-L12, Z1-Z6, con etiqueta),
+  cuencas (Calispuquio, Los Chilcos, San Lucas), red de drenaje y área de estudio.
+- Planos P-01 a P-06 (uno a la vez): los seis planos georreferenciados.
+  Al marcar uno se apaga el anterior. Para superponer dos, quite la opción
+  "Grupo mutuamente excluyente" (clic derecho en el grupo) y baje la opacidad
+  en Propiedades > Transparencia.
+- Base: curvas de nivel cada 25 m, DEM sombreado y OpenStreetMap (requiere internet).
