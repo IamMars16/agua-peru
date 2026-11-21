@@ -8,8 +8,10 @@ Proyecto QGIS - Drenaje pluvial de la ciudad de Cajamarca
 Panel de capas
 - Datos del estudio: puntos críticos (C1-C13, L1-L12, Z1-Z6, con etiqueta),
   cuencas (Calispuquio, Los Chilcos, San Lucas), red de drenaje y área de estudio.
-- Planos P-01 a P-06 (uno a la vez): los seis planos georreferenciados.
+- Planos P-01 a P-11 (uno a la vez): los seis planos georreferenciados.
   Al marcar uno se apaga el anterior. Para superponer dos, quite la opción
   "Grupo mutuamente excluyente" (clic derecho en el grupo) y baje la opacidad
   en Propiedades > Transparencia.
 - Base: curvas de nivel cada 25 m, DEM sombreado y OpenStreetMap (requiere internet).
+
+Nuevas capas (noviembre 2026): grupo "Análisis del terreno" con pendiente (%) y altura sobre el drenaje (HAND), y los planos P-07 a P-11.
