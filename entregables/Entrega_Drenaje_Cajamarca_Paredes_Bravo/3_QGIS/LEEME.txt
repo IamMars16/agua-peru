@@ -14,4 +14,4 @@ Panel de capas
   en Propiedades > Transparencia.
 - Base: curvas de nivel cada 25 m, DEM sombreado y OpenStreetMap (requiere internet).
 
-Nuevas capas (noviembre 2026): grupo "Análisis del terreno" con pendiente (%) y altura sobre el drenaje (HAND), y los planos P-07 a P-11.
+Nuevas capas (17/11/2026): grupo "Análisis del terreno" con pendiente (%) y altura sobre el drenaje (HAND), y los planos P-07 a P-11.
